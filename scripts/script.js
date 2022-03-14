@@ -4,8 +4,6 @@ app.then(data => {
     el.innerHTML = makeTemplate(data.advice, data.id);
 
     generateNewAdvice();
-    changeDivider();
-
 })
 
 //===========FETCH ADVICES DATA====================
@@ -47,17 +45,10 @@ function generateNewAdvice() {
         _id.then(data => {
             id_num.textContent = "ADVICE #" + data.id;
         });
+
     });
+
+
 }
 
-function changeDivider() {
-    const target = document.querySelector(".divider > img");
 
-    if(window.innerWidth > 992) {
-        target.src = "./images/pattern-divider-desktop.svg";
-    }
-
-    else {
-        target.src = "./images/pattern-divider-mobile.svg"
-    }
-}
