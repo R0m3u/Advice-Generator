@@ -18,6 +18,7 @@ async function getAdvices() {
     return {
         advice, id
     }
+
 }
 //===========FETCH ADVICES DATA====================
 
